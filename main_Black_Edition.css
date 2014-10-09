@@ -1,0 +1,73 @@
+
+	/*Css for informatie page*/
+	#AlgInfP{
+		font-size: 15px;
+		color: white;
+	}
+	#info_h1{
+		padding-bottom: 2%;
+		font-weight:bold;
+	}
+	.borderexample {
+	border-style:solid;
+	border-color:black;
+	border-width: 2px;
+	}
+	#FFTable {
+	color: white;
+	border: 1px solid white;
+	float: right;
+	}
+	#DIV_FacUL {
+		clear: right;
+		float: left;
+	}
+	
+	#All_Text{
+		border: 1px solid;
+		width: 1200px;
+		margin: 20px auto;
+		text-align: left;	
+	}
+	
+	#para_info_1{
+		width: 700px;
+		padding: 20px;
+		margin-bottom: 15px;
+		float: left;
+		
+	}
+	#img_info_1{
+		float:right;
+		margin:5px;
+		width: 400px;
+	}
+	#para_info_2{
+		width: 700px;
+		padding: 20px;
+		padding-bottom:50px;
+		float: right;
+	}
+	#img_info_2{
+		float:left;
+		margin:5px;
+		margin-top: 50px;
+
+	}
+	
+	#hr_info1{
+		clear:both;
+	}
+	#copyright_overig{
+		clear:both;
+		text-align:center;
+		padding: 20px;
+		color: white;
+		font-size: 16px;
+		font-weight: normal;
+	}
+	#FacUL {
+		color: white;
+	}
+	
+	

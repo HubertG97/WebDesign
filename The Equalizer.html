@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Filmpje</title>
+	<link rel="stylesheet" href="filmpaginacss.css">	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript">
+// IMDB-ID voor de zoekopdracht 
+var imdbId = "tt0455944";
+
+// Verzoek indienen bij OMDB-API
+var http = new XMLHttpRequest();
+http.open("GET", "http://www.omdbapi.com/?i=" + imdbId, false);
+http.send(null);
+
+// Reactie JSON file
+var omdbData = http.responseText;
+var omdbJSON = eval("(" + omdbData + ")");
+
+// Uitprinten JSON Data
+var TAGarray = ["Titel:", "Jaar:", "Rating:","Release Datum:", "Duur:", "Genre:", "Regisseur:", "Schrijver:", "Acteurs:", 
+"Verhaal:", "Taal:", "Prijzen:"];
+
+var JSONarray = [omdbJSON.Title, omdbJSON.Year, omdbJSON.Rated, omdbJSON.Released , omdbJSON.Runtime, 
+omdbJSON.Genre, omdbJSON.Director, omdbJSON.Writer, omdbJSON.Actors, omdbJSON.Plot, omdbJSON.Language,
+omdbJSON.Awards, omdbJSON.Poster];
+
+function toon_tabel()
+{
+  var tabel = "<TABLE>";
+  tabel+="<tr><td><img src = '" + JSONarray[12] + "'></td></tr>";
+  
+  for(var i = 0 ; i < JSONarray.length-1 ; i++)
+  {
+    tabel+=
+	  "<TR>" +
+	  "<TD>" + TAGarray[i] + " " + JSONarray[i] + "</TD>" +
+	  "</TR>";
+  }
+  tabel+= "</TABLE>";
+  document.getElementById("div_tabel").innerHTML = tabel;
+}
+
+
+
+</script>
+</head>
+<body onload = "toon_tabel()";>
+	<a href="HTMLFILMPJE.html"><div id="home_link"></div></a>
+<div id="background">
+
+<div id="header">
+
+
+
+<a href="info_page.html"><div class="nav_tab">Films</div></a>
+<a href="HTMLINFO.html"><div class="nav_tab">Over</div></a>
+<a href="info_page.html"><div class="nav_tab">Locatie</div></a>
+<a href="info_page.html"><div class="nav_tab">Zalen</div></a>
+
+</div>
+
+<div id="logo_header">
+<img src="logo_white7.png"/>
+</div>
+
+
+</div>
+<div id="background2">
+<div id="div_tabel" style=":scroll:auto;"></div>
+
+<div id="trailer">
+<iframe src="http://www.imdb.com/video/imdb/vi698592281/imdb/embed?autoplay=false&width=480" width="844" height="475" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" frameborder="no" scrolling="no"></iframe>
+</div>
+
+</div>
+</body>
+<footer id="copyright">
+		©Copyright INF1F Group 5 2014
+</footer>
+</html>

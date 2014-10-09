@@ -1,0 +1,128 @@
+<!DOCTYPE>
+
+<html>
+<head>
+<title>F!lmpje</title>
+<link type="text/css" rel="stylesheet" href="stylesheetfilmpje.css"></link>
+
+
+<meta charset="utf-8">
+
+      
+    <!-- bjqs.css contains the *essential* css needed for the slider to work -->
+    <link rel="stylesheet" href="bjqs.css">
+	<link rel="stylesheet" href="demo.css">
+	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300' rel='stylesheet' type='text/css'> 
+
+    <!-- demo.css contains additional styles used to set up this demo page - not required for the slider --> 
+
+
+    <!-- load jQuery and the plugin -->
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/bjqs-1.3.min.js"></script>
+
+
+</head>
+
+
+<body>
+<a href="HTMLFILMPJE.html"><div id="home_link"></div></a>
+<div id="background">
+
+<div id="header">
+
+
+
+<a href="Animationhover.html"><div class="nav_tab">Films</div></a>
+<a href="HTMLINFO.html"><div class="nav_tab">Over</div></a>
+<a href=""><div class="nav_tab">Locatie</div></a>
+<a href=""><div class="nav_tab">Zalen</div></a>
+
+</div>
+
+<div id="logo_header">
+<img src="logo_white7.png"/>
+</div>
+
+
+</div>
+
+<br>
+<div id="banner-slide">
+
+        <!-- start Basic Jquery Slider -->
+        <ul class="bjqs">
+          <li><a href="The Equalizer.html"><img src="img/banner01.jpg" title=""></a></li>
+          <li><a href="Dracula Untold.html"><img src="img/banner02.jpg" ></li>
+          <li><img src="img/banner03.jpg"></li>
+        </ul>
+        <!-- end Basic jQuery Slider -->
+
+      </div>
+	  <script class="secret-source">
+        jQuery(document).ready(function($) {
+          
+          $('#banner-slide').bjqs({
+            animtype      : 'slide',
+            height        : 250,
+            width         : 1152,
+            responsive    : false,
+            randomstart   : true
+          });
+          
+        });
+      </script>
+
+
+<div id="background2">
+
+<div id="container">
+<div class="tabs">Actueel</div>
+<div id="nav_menu">
+
+
+
+<table>
+<tbody>
+	<tr>
+		
+		<a href="The November Man.html"<td class="movie_table"><img class="movie_image" src="novemberman.jpg"/></td></a>
+		<td class="movie_table"><img class="movie_image" src="letsbecops.jpg"/></td>
+		<td class="movie_table"><img class="movie_image" src="lucyposter.jpg"/></td>
+		<td class="movie_table"><img class="movie_image" src="asabove.jpg"/></td>
+		<td class="movie_table"><img class="movie_image" src="guardiansofthegalaxy.jpg"/></td>
+		
+		
+	
+	</tr>
+<!--
+		<tr>
+		<td class="Film_naam">November man</td>
+		<td class="Film_naam">Let's be cops</td>
+		<td class="Film_naam">Lucy</td>
+		<td class="Film_naam">As above so below</td>
+		<td class="Film_naam">Guardians of the galaxy</td>
+		
+		</tr>
+-->
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+
+
+</div>
+
+
+    
+
+</body>
+
+
+
+
+</html>
